@@ -7,7 +7,7 @@ resource "null_resource" "install_softwares" {
   
     connection {
      type     = "ssh"
-     host     = "172.174.37.110"       # IP público da VM
+     host     = "xxx.xxx.xxx.xxx"       # IP público da VM
      user     = var.admin_username
      password = var.admin_password
      timeout  = "2m"
@@ -17,7 +17,7 @@ resource "null_resource" "install_softwares" {
   provisioner "remote-exec" {
     connection {
       type     = "ssh"
-      host     = "172.174.37.110"
+      host     = "xxx.xxx.xxx.xxx"
       user     = var.admin_username
       password = var.admin_password
     }
