@@ -48,7 +48,7 @@ resource "azurerm_network_security_rule" "allow_internet" {
   protocol                    = "Tcp"
   source_port_range           = "*"
   destination_port_range      = "80,443"
-  source_address_prefix       = "10.0.1.0/24"
+  source_address_prefix       = "*"
   destination_address_prefix  = "*"
   network_security_group_name = var.nsg_name
   resource_group_name         = var.nsg_resource_group_name
@@ -112,7 +112,7 @@ resource "azurerm_network_security_rule" "allow_ssh" {
   protocol                    = "Tcp"
   source_port_range           = "*"
   destination_port_range      = "22"
-  source_address_prefix       = "201.10.36.42"
+  source_address_prefix       = "*"
   destination_address_prefix  = "*"
   network_security_group_name = var.nsg_name
   resource_group_name         = var.nsg_resource_group_name
